@@ -94,21 +94,25 @@ export default {
 
 <style>
 html,
-body {
+body,
+#app {
   height: 100%;
 }
 
 .container {
   min-height: 100%;
-  display: grid;
-  grid-template-rows: 1fr auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.columns {
+  flex-grow: 1;
 }
 
 .footer {
   background: white;
   padding: 1rem;
-  grid-row-start: 2;
-  grid-row-end: 3;
+  flex-shrink: 0;
 }
 
 .buttons .button {
