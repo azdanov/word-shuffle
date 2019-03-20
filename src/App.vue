@@ -96,7 +96,8 @@ export default {
 
 <style>
 html,
-body {
+body,
+#app {
   height: 100%;
 }
 
