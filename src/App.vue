@@ -1,15 +1,17 @@
 <template>
   <div id="app" class="container">
-    <div class="columns is-centered is-multiline">
+    <div class="columns is-centered">
       <div class="column is-half is-clearfix">
-        <b-field label="Message">
-          <b-input type="textarea" v-model="text"></b-input>
+        <b-field label="Text">
+          <b-input rows="10" type="textarea" v-model="text"></b-input>
         </b-field>
         <button @click="clear" class="button is-fullwidth">Clear</button>
       </div>
 
-      <div v-if="text" class="column is-three-fifths">
-        <pre class="has-text-left">{{transform}}</pre>
+      <div v-if="text" class="column is-half">
+        <b-field label="Shuffle">
+          <b-input rows="10" type="textarea" :value="transform"></b-input>
+        </b-field>
         <div class="buttons has-addons is-centered">
           <button @click="shuffle = Math.random()" class="button">Shuffle</button>
           <button
